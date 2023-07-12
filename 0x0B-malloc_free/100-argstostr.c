@@ -30,19 +30,20 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0; j = 0; i < ac && j < len; i++)
+	for (i = 0, j = 0; i < ac && j < len; i++)
 	{
 		s = av[i];
 		k = 0;
+
 		while (s[k])
 		{
-			sttr[j] = s[k];
+			str[j] = s[k];
 			k++;
 			j++;
 		}
-		str[j++] = '\n'
+		str[j++] = '\n';
 	}
-	str[j] = '\0';
+	str[j] = '\n';
 
 	return (str);
 }
